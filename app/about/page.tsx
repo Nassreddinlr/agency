@@ -139,43 +139,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 lg:py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 lg:mb-20 space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              {t('about.team.title')}
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              {t('about.team.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-card border border-border/50 p-8 rounded-2xl text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 space-y-6">
-                <img
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/20"
-                />
-                <div className="space-y-3">
-                  <h3 className="text-xl lg:text-2xl font-semibold text-foreground">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary font-medium text-lg">
-                    {member.role}
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 lg:py-32 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
